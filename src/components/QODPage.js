@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import QuoteBox from "./QuoteBox";
 import { fetchQODFromAPI } from "../actions/qod";
 
+
 class QODPage extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +32,12 @@ class QODPage extends React.Component {
       return (
         <div>
           <QuoteBox qod={this.state.QOD} />
+          <button
+           onClick= {() => {
+              this.props.dispatch(fetchQODFromAPI());
+           }}> 
+            Refresh
+          </button>
         </div>
       );
   }
