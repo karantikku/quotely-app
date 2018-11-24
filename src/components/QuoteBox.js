@@ -1,10 +1,7 @@
 import React from "react";
 
-export default () => (
+export default props => (
   <div>
-    <p>
-      Education is an admirable thing, but it is well to remember from time to
-      time that nothing that is worth knowing can be taught.
-    </p>
+    <p>{props.qod}</p>
   </div>
 );
