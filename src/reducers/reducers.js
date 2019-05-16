@@ -7,6 +7,7 @@ const defaultQODState = {
 };
 
 export const qodReducer = (state = defaultQODState, action) => {
+  console.log(action);
   switch (action.type) {
     case FETCH_QOD_REQUEST:
       return {
